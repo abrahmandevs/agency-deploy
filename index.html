@@ -1,0 +1,1568 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta Tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" />
+	<!-- Company Title -->
+	<title>Agency | AR Rahman | Tailwind CSS </title>
+	<!-- google-font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+	<!-- Company Icon -->
+	<link rel="icon" href="images/demo/tailwindcss-mark.svg" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/all.min.css" />
+	<!-- Tailwind CSS -->
+	<link rel="stylesheet" href="css/app.css" />
+	<!--<script src="css/tailwind.min.css"></script>
+	 Circle progress bar -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<script //src="js/progressbar.min.js"></script>
+	<style>
+		.swiper {
+			width: 100%;
+			height: 100%;
+		}
+		@font-face {
+			font-family: 'Arimo', 'Oswald';
+			src: url( 'https://fonts.googleapis.com/css2?family=Arimo&family=Oswald&display=swap');
+		} 
+		.font-arimo{
+			font-family:'Arimo', sans-serif!important;
+		}
+		.font-oswald{
+			font-family:'Oswald', sans-serif!important;
+		}
+	</style>
+</head>
+
+<body class="font-oswald">
+	<header>
+		
+<div class="">
+	<div class="px-4 md:px-16 lg:px-20 py-3.5 " style="background-color:#fbbf24">
+		<div class="flex items-center justify-between">
+			<div class="flex items-center m-auto sm:m-0 gap-x-4 text-sm text-white ">
+								<div class="flex items-center gap-1 group">
+					<div class="group-hover:text-black transition-all duration-700 h-4 w-4"><i class="fas fa-phone-alt"></i></div>
+					<p class="group-hover:text-black transition-all duration-300">+8801909055573</p>
+				</div>							
+								<div class="flex items-center gap-1 group">
+					<div class="group-hover:text-black transition-all duration-700 h-4 w-4"><i class="fas fa-envelope"></i></div>
+					<p class="group-hover:text-black transition-all duration-300">arr47009@gmail.com</p>
+				</div>							
+							</div>
+			<nav class="hidden sm:block">
+				<ul class="flex items-center gap-x-4 list-none text-sm">
+					<li><a href="https://web.facebook.com/arrahman47/" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://twitter.com/AR_Rahman47" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/arrahman73/" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="http://www.github.com/ARRahman73/" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-github"></i></a></li>
+					<li><a href="#" class="text-white hover:text-black transition-all duration-300"><i class="fas fa-rss"></i></a></li>
+					<li><a href="arr47009@gmail" class="text-white hover:text-black transition-all duration-300"><i class="fab fa-google-plus-g"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>		
+
+
+<!-- Section-of- home_toggle_manue_nav -->
+<section id="home_toggle_manue_nav" class="px-4 md:px-16 lg:px-20 sticky w-full bg-white z-50">
+    <!-- Mobile manue -->
+	<div x-data="{ mobile: false }" x-init="init()" @click.away="mobile = false"  @keydown.escape.stop="mobile = false; focusButton()" class="flex items-center justify-between md:justify-center">
+		<!-- logo -->
+		<div class="relative z-10 lg:hidden">
+			<a href="#" ><img src="images/demo/logo.png" class="h-16" alt="logo"></a>
+		</div>
+		<!-- Mobile menu dropdown button-->
+		<button type="button" class="md:hidden" x-ref="button" @click="mobile = !mobile">
+			<svg x-state:on="Menu open" x-state:off="Menu closed" class="text-yellow-400 transition-all duration-300 h-6 w-6 block" :class="{ 'hidden': mobile, 'block': !(mobile) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+			<svg x-state:on="Menu open" x-state:off="Menu closed" class="h-6 w-6 hidden" :class="{'text-yellow-400 block': mobile, 'hidden': !(mobile) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+		<div class=" max-h-0 absolute inset-0 top-16 bg-gray-900  transition-all duration-500 " x-show="mobile" x-ref="mobile1" :style="mobile == mobile ?  'max-height: '+ $refs.mobile1.scrollHeight + 'px' :'' ">
+			
+
+
+<!-- Section-of- mobile-menu -->
+<div class="lg:hidden w-full bg-white pb-6 px-2 sm:px-3">
+    <div class="shadow-box space-y-1">
+		<!-- home -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Home</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home</a>
+				<a href="#" class="block py-1 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home Page 1</a>
+				<a href="#" class="block py-1 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home Page 2</a>
+			</div>
+		</div>
+		<!-- Pages -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Pages</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">About us</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">About me</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Client</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">History</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Profile</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Comming soon</a>
+			</div>
+		</div>
+		<!-- Portfolio -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Portfolio</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid gutter</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid width</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid width full</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid row</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Comming soon</a>
+			</div>
+		</div>
+		<!-- Shop -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Shop</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+			</div>
+		</div>
+		<!-- Features -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Features</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+			</div>
+		</div>
+		<!-- blog -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Blog</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+				<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+			</div>
+		</div>
+		<!-- Contact -->
+		<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+			<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+				<span >Contact</span>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+				</svg>
+			</button>
+			<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+
+				<!-- login / signin modal -->
+				<div x-data="{ open : false }" @keydown.window.escape="open = false" @click.away="open=false" class="group z-20">
+					
+												
+						<button id="signIn" class="flex gap-1 py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" @click="open = true" >
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+							</svg>
+							<span class="font-medium ">Sign in</span>
+						</button>
+						
+												
+					<div x-show="open" class="fixed z-50 inset-0 overflow-y-auto my-auto top-5 -bottom-5" x-ref="dialog" aria-modal="true" style="display: none;">
+						<div class="flex sm:block md:px-2 lg:px-4" style="font-size: 0;">
+							<div x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-transition:enter-end="opacity-100 translate-y-0 md:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 md:scale-100" x-transition:leave-end="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-description="Modal panel, show/hide based on modal state." class="w-full lg:w-9/12 m-auto mt-6 transform transition p-2 sm:align-middle z-1010" style="display: none;">
+								<div class=" relative bg-gray-200 rounded-lg  shadow-2xl overflow-hidden border border-yellow-400">
+									<!-- close-button -->
+									<button type="button" class="absolute top-4 right-4 text-gray-400 trnsition-all duration-300 hover:text-red-500" @click="open = false">
+										<span class="sr-only">Close</span>
+										<svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+										</svg>
+									</button>
+
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base divide-x divide-yellow-400 ">
+										<div class="px-8 py-14 space-y-4">
+											<h1 class="text-3xl font-medium">Hey there!<br>Welcome back.</h1>
+											<img id="signUP" src="images/demo/signin-dark.svg" alt="" class="p-4 block w-full h-auto text-center">
+											<h3 class="">Don't have an account? <span class="cursor-pointer text-blue-700 underline hover:no-underline transition-all" onclick=" function signUp(){return signUp()}; if ( signUp() == null){console.log(' net name')}else{console.log('pisssa')};">Sign up here</span></h3>
+										</div>
+
+										<form method="post" class="text-left text-black space-y-8 px-8 py-14 ">
+											<div class="space-y-4">
+												<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-2 transition-all duration-500 ">
+													<i class="fab fa-google"></i>
+													<span>Sign in with Google</span>
+												</button>
+												<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-2 transition-all duration-500 ">
+													<i class="fab fa-facebook-f"></i>
+													<span>Sign in with Facebook</span>
+												</button>
+											</div>
+											<div class="flex items-center gap-3">
+												<hr class="border-t border-yellow-400 w-3/6 inline-block"><span>Or</span>
+												<hr class="border-t border-yellow-400 w-3/6 inline-block">
+											</div>
+											<div class="space-y-4">
+												<div class="space-y-1 relative">
+													<label for="login_email">Email adderss</label>
+													<input type="email" id="login_email" name="login_email" class="form-input w-full text-md font-semibold bg-gray-400 bg-opacity-30 rounded-lg border border-gray-300 focus:border-yellow-500 focus:bg-white focus:ring-transparent placeholder-white" placeholder="Email" value="">
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="space-y-1">
+													<label for="login_password" class="flex items-center justify-between">
+														<h4>Password</h4>
+														<h4 class="underline hover:no-underline text-sm">Forger password</h4>
+													</label>
+													<input type="password" id="login_password" name="login_password" class="form-input w-full text-md font-semibold bg-gray-400 bg-opacity-30 rounded-lg border border-gray-300 focus:border-yellow-500 focus:bg-white focus:ring-transparent placeholder-white" placeholder="Password">
+												</div>
+												<div>
+													<button name="loginSubmition" class="mt-6 flex justify-center gap-x-2 w-full text-white bg-yellow-500 rounded-md px-5 py-2 transition-all duration-500 ">Sign in</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- modal sign up page -->
+				<div x-data="{ open : false  }" @keydown.window.escape="open = false" @click.away="open=false"  class="group z-20">
+					<button id=" signUP" ft="signUp(); console.log('ame'); " class="flex gap-1 py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" @click="open = true" >
+						
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+							</svg>
+							<span class="font-medium ">Sign up</span>
+														
+						
+					</button>
+					<div x-show="open" class="fixed z-50 inset-0 overflow-y-hidden my-auto top-5 -bottom-5" x-ref="dialog" aria-modal="true" style="display: none;">
+						<div class="flex min-h-screen sm:block md:px-2 lg:px-4" style="font-size: 0;">
+							<div x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-transition:enter-end="opacity-100 translate-y-0 md:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 md:scale-100" x-transition:leave-end="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-description="Modal panel, show/hide based on modal state." class="w-full lg:w-9/12 m-auto transform transition p-2 sm:align-middle z-1010" style="display: none;">
+								<div class="relative bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden border border-gray-800">
+									<!-- close-button -->
+									<button type="button" class="absolute top-2 right-2 text-gray-400 trnsition-all duration-300 hover:text-red-500" @click="open = false">
+										<span class="sr-only">Close</span>
+										<svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+										</svg>
+									</button>
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base divide-x divide-gray-800 ">
+										<div class="px-8 pt-8 md:py-14 space-y-4">
+											<h1 class="text-3xl font-bold pb-5">Join Finder.<br>Get premium benefits:</h1>
+											<div class="space-y-1 pt-5">
+												<div class="flex items-center gap-x-2">
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+													</svg>
+													<p>Add and promote your listings</p>
+												</div>
+												<div class="flex items-center gap-x-2">
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+													</svg>
+													<p>Easily manage your wishlist</p>
+												</div>
+												<div class="flex items-center gap-x-2">
+													<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+													</svg>
+													<p>Leave reviews</p>
+												</div>
+											</div>
+											<img src="images/demo/signup-dark.svg" alt="" class="p-4 block w-full h-auto text-center">
+											<h3 class="text-gray-400">You have an account? <a href="#" class="text-white underline hover:no-underline transition-all" onclick="if(!confirm('Do You Want To Delete Section Image')){ return event.preventDefault(); }else{ document.getElementById('#signIn').click();}">Sign in here</a></h3>
+										</div>
+										<form method="post" class="text-left text-white text-sm space-y-2 p-8 ">
+											<div class="space-y-2">
+												<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-1.5 transition-all duration-500 ">
+													<i class="fab fa-google"></i>
+													<span>Sign in with Google</span>
+												</button>
+												<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-1.5 transition-all duration-500 ">
+													<i class="fab fa-facebook-f"></i>
+													<span>Sign in with Facebook</span>
+												</button>
+											</div>
+											<div class="flex items-center gap-3">
+												<hr class="border-t border-gray-700 w-3/6 inline-block"><span>Or</span>
+												<hr class="border-t border-gray-700 w-3/6 inline-block">
+											</div>
+											<div class="space-y-3.5">
+												<div class="space-y-1 relative">
+													<label for="signUp_name">Full name</label>
+													<input type="text" id="signUp_name" name="signUp_name" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="Full Name" value="">
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="space-y-1 relative">
+													<label for="signUp_phone">Phone</label>
+													<input type="text" id="signUp_phone" name="signUp_phone" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="Your Phone Number" value="" >
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="space-y-1 relative">
+													<label for="signUp_email">Email</label>
+													<input type="email" id="signUp_email" name="signUp_email" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="email address" value="">
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="space-y-1 relative">
+													<label for="signUp_password" class="flex items-center gap-1">
+														<h4>Password</h4>
+														<span class="text-gray-500 text-sm">min.8 char</span>
+													</label>
+													<input type="password" id="signUp_password" name="signUp_password" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent" placeholder="Password">
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="space-y-1 relative">
+													<label for="signUp_confirm_Password">
+														<h4>Confirm password</h4>
+													</label>
+													<input type="password" id="signUp_confirm_Password" name="signUp_confirm_Password" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent" placeholder="Confirm Password">
+													<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+												</div>
+												<div class="flex gap-x-2 ">
+													<input id="" type="checkbox" name="" class="form-checkbox rounded text-transparent bg-transparent border-0 ring-2 ring-red-500 focus:ring-red-500 focus:ring-offset-0 mt-1">
+													<span class="text-gray-400">By joining, I agree to the <a class="text-white font-medium cursor-pointer underline hover:no-underline">Terms of use</a> and <a class="text-white font-medium cursor-pointer underline hover:no-underline">Privacy policy</a></span>
+												</div>
+												<div>
+													<button name="signUpSubmition" class="mt-4 flex justify-center gap-x-2 w-full text-white bg-red-500 rounded-md px-5 py-2 transition-all duration-500 ">Sign up</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- Shortcodes -->
+					<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="z-10">
+						<button type="button" class="bg-green-50 w-full flex items-center justify-between  hover:text-yellow-400 px-2 py-2 transition-all duration-300" :class="dropdown = dropdown ? 'mb-3.5 text-yellow-400' : '' " id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+							<span >Shortcodes</span>
+							<svg xmlns="http://www.w3.org/2000/svg" :class="{ 'hidden': dropdown, 'block': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" :class="{'text-yellow-400 block': dropdown, 'hidden': !(dropdown) }" class="h-6 w-6 text-yellow-400 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+							</svg>
+						</button>
+						<div class="capitalize text-sm max-h-0 overflow-hidden px-3 bg-white transition-all duration-500" x-ref="dropdown1" :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+							<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+							<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+							<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+							<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+							<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single end</a>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</section>		
+<nav id="" x-data="{ open: false}" class="hidden md:block w-full mt-0  z-50">
+	<div class="px-10 md:px-16 lg:px-20 bg-white mx-auto">
+		<!-- demos dropdown -->
+		<div class="flex items-center justify-center space-x-4 py-5 lg:py-0">
+			<!-- home -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					<span class="sr-only">Open user menu</span>
+					Home
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-16 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home Page 1</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Home Page 2</a>
+				</div>
+			</div>
+			<!-- Pages -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Pages
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">About us</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">About me</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Client</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">History</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Profile</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Comming soon</a>
+				</div>
+			</div>
+			<!-- Portfolio -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Portfolio
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid gutter</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid width</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid width full</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Grid row</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">Comming soon</a>
+				</div>
+			</div>
+			<!-- Shop -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Shop
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+				</div>
+			</div>
+			<!-- logo -->
+			<div class="relative z-10 hidden lg:block">
+				<a href="#" ><img src="images/demo/logo.png" class="h-16 px-4" alt="logo"></a>
+			</div>
+			<!-- Features -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Features
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+				</div>
+			</div>
+			<!-- blog -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Blog
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+				</div>
+			</div>
+			<!-- Contact -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Contact
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? 'pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					
+					<!-- login / signin modal -->
+					<div x-data="{ open : false }" @keydown.window.escape="open = false" @click.away="open=false" class="group z-20">
+						<button id="signIn" class="flex gap-1 py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" @click="open = true" >
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+							</svg>
+							<span class="font-medium ">Sign in</span>
+						</button>
+						<div x-show="open" class="fixed z-50 inset-0 overflow-y-auto my-auto top-5 -bottom-5" x-ref="dialog" aria-modal="true" style="display: none;">
+							<div class="flex sm:block md:px-2 lg:px-4" style="font-size: 0;">
+								<div x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-transition:enter-end="opacity-100 translate-y-0 md:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 md:scale-100" x-transition:leave-end="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-description="Modal panel, show/hide based on modal state." class="w-full lg:w-9/12 m-auto mt-6 transform transition p-2 sm:align-middle z-1010" style="display: none;">
+									<div class=" relative bg-gray-200 rounded-lg  shadow-2xl overflow-hidden border border-yellow-400">
+										<!-- close-button -->
+										<button type="button" class="absolute top-4 right-4 text-gray-400 trnsition-all duration-300 hover:text-red-500" @click="open = false">
+											<span class="sr-only">Close</span>
+											<svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+											</svg>
+										</button>
+
+										<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base divide-x divide-yellow-400 ">
+											<div class="px-8 py-14 space-y-4">
+												<h1 class="text-3xl font-medium">Hey there!<br>Welcome back.</h1>
+												<img id="signUP" src="images/demo/signin-dark.svg" alt="" class="p-4 block w-full h-auto text-center">
+												<h3 class="">Don't have an account? <span class="cursor-pointer text-blue-700 underline hover:no-underline transition-all" onclick=" function signUp(){return signUp()}; if ( signUp() == null){console.log(' net name')}else{console.log('pisssa')};">Sign up here</span></h3>
+											</div>
+
+											<form method="post" class="text-left text-black space-y-8 px-8 py-14 ">
+												<div class="space-y-4">
+													<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-2 transition-all duration-500 ">
+														<i class="fab fa-google"></i>
+														<span>Sign in with Google</span>
+													</button>
+													<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-2 transition-all duration-500 ">
+														<i class="fab fa-facebook-f"></i>
+														<span>Sign in with Facebook</span>
+													</button>
+												</div>
+												<div class="flex items-center gap-3">
+													<hr class="border-t border-yellow-400 w-3/6 inline-block"><span>Or</span>
+													<hr class="border-t border-yellow-400 w-3/6 inline-block">
+												</div>
+												<div class="space-y-4">
+													<div class="space-y-1 relative">
+														<label for="login_email">Email adderss</label>
+														<input type="email" id="login_email" name="login_email" class="form-input w-full text-md font-semibold bg-gray-400 bg-opacity-30 rounded-lg border border-gray-300 focus:border-yellow-500 focus:bg-white focus:ring-transparent placeholder-white" placeholder="Email" value="">
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="space-y-1">
+														<label for="login_password" class="flex items-center justify-between">
+															<h4>Password</h4>
+															<h4 class="underline hover:no-underline text-sm">Forger password</h4>
+														</label>
+														<input type="password" id="login_password" name="login_password" class="form-input w-full text-md font-semibold bg-gray-400 bg-opacity-30 rounded-lg border border-gray-300 focus:border-yellow-500 focus:bg-white focus:ring-transparent placeholder-white" placeholder="Password">
+													</div>
+													<div>
+														<button name="loginSubmition" class="mt-6 flex justify-center gap-x-2 w-full text-white bg-yellow-500 rounded-md px-5 py-2 transition-all duration-500 ">Sign in</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- modal sign up page -->
+					<div x-data="{ open : false  }" @keydown.window.escape="open = false" @click.away="open=false"  class="group z-20">
+						<button id=" signUP" ft="signUp(); console.log('ame'); " class="flex gap-1 py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" @click="open = true" >
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+							</svg>
+							<span class="font-medium ">Sign up</span>
+						</button>
+						<div x-show="open" class="fixed z-50 inset-0 overflow-y-hidden my-auto top-5 -bottom-5" x-ref="dialog" aria-modal="true" style="display: none;">
+							<div class="flex min-h-screen sm:block md:px-2 lg:px-4" style="font-size: 0;">
+								<div x-show="open" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-transition:enter-end="opacity-100 translate-y-0 md:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 md:scale-100" x-transition:leave-end="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" x-description="Modal panel, show/hide based on modal state." class="w-full lg:w-9/12 m-auto transform transition p-2 sm:align-middle z-1010" style="display: none;">
+									<div class="relative bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden border border-gray-800">
+										<!-- close-button -->
+										<button type="button" class="absolute top-2 right-2 text-gray-400 trnsition-all duration-300 hover:text-red-500" @click="open = false">
+											<span class="sr-only">Close</span>
+											<svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+											</svg>
+										</button>
+										<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base divide-x divide-gray-800 ">
+											<div class="px-8 pt-8 md:py-14 space-y-4">
+												<h1 class="text-3xl font-bold pb-5">Join Finder.<br>Get premium benefits:</h1>
+												<div class="space-y-1 pt-5">
+													<div class="flex items-center gap-x-2">
+														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+														</svg>
+														<p>Add and promote your listings</p>
+													</div>
+													<div class="flex items-center gap-x-2">
+														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+														</svg>
+														<p>Easily manage your wishlist</p>
+													</div>
+													<div class="flex items-center gap-x-2">
+														<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+														</svg>
+														<p>Leave reviews</p>
+													</div>
+												</div>
+												<img src="images/demo/signup-dark.svg" alt="" class="p-4 block w-full h-auto text-center">
+												<h3 class="text-gray-400">You have an account? <a href="#" class="text-white underline hover:no-underline transition-all" onclick="if(!confirm('Do You Want To Delete Section Image')){ return event.preventDefault(); }else{ document.getElementById('#signIn').click();}">Sign in here</a></h3>
+											</div>
+											<form method="post" class="text-left text-white text-sm space-y-2 p-8 ">
+												<div class="space-y-2">
+													<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-1.5 transition-all duration-500 ">
+														<i class="fab fa-google"></i>
+														<span>Sign in with Google</span>
+													</button>
+													<button type="button" class="flex items-center justify-center gap-x-2 w-full text-blue-600 hover:text-white hover:bg-blue-500 border border-blue-600 font-bold rounded-md px-5 py-1.5 transition-all duration-500 ">
+														<i class="fab fa-facebook-f"></i>
+														<span>Sign in with Facebook</span>
+													</button>
+												</div>
+												<div class="flex items-center gap-3">
+													<hr class="border-t border-gray-700 w-3/6 inline-block"><span>Or</span>
+													<hr class="border-t border-gray-700 w-3/6 inline-block">
+												</div>
+												<div class="space-y-3.5">
+													<div class="space-y-1 relative">
+														<label for="signUp_name">Full name</label>
+														<input type="text" id="signUp_name" name="signUp_name" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="Full Name" value="">
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="space-y-1 relative">
+														<label for="signUp_phone">Phone</label>
+														<input type="text" id="signUp_phone" name="signUp_phone" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="Your Phone Number" value="" >
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="space-y-1 relative">
+														<label for="signUp_email">Email</label>
+														<input type="email" id="signUp_email" name="signUp_email" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent placeholder-gray-400" placeholder="email address" value="">
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="space-y-1 relative">
+														<label for="signUp_password" class="flex items-center gap-1">
+															<h4>Password</h4>
+															<span class="text-gray-500 text-sm">min.8 char</span>
+														</label>
+														<input type="password" id="signUp_password" name="signUp_password" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent" placeholder="Password">
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="space-y-1 relative">
+														<label for="signUp_confirm_Password">
+															<h4>Confirm password</h4>
+														</label>
+														<input type="password" id="signUp_confirm_Password" name="signUp_confirm_Password" class="form-input py-1.5 w-full text-sm font-semibold bg-gray-600 bg-opacity-30 rounded-lg border border-gray-700 focus:border-gray-600 focus:bg-gray-800 focus:ring-transparent" placeholder="Confirm Password">
+														<div class="text-xs text-red-500 font-bold absolute -bottom-3.5"></div>
+													</div>
+													<div class="flex gap-x-2 ">
+														<input id="" type="checkbox" name="" class="form-checkbox rounded text-transparent bg-transparent border-0 ring-2 ring-red-500 focus:ring-red-500 focus:ring-offset-0 mt-1">
+														<span class="text-gray-400">By joining, I agree to the <a class="text-white font-medium cursor-pointer underline hover:no-underline">Terms of use</a> and <a class="text-white font-medium cursor-pointer underline hover:no-underline">Privacy policy</a></span>
+													</div>
+													<div>
+														<button name="signUpSubmition" class="mt-4 flex justify-center gap-x-2 w-full text-white bg-red-500 rounded-md px-5 py-2 transition-all duration-500 ">Sign up</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- Shortcodes -->
+			<div x-data="{ dropdown: false }" x-init="init()" @keydown.escape.stop="dropdown = false; focusButton()" @click.away="dropdown = false" class="relative z-10">
+				<button type="button" class="text-gray-700  hover:text-yellow-400 px-2 transition-all duration-300" id="user-menu-button" x-ref="button" @click="dropdown =! dropdown" @keyup.space.prevent="dropdown =! dropdown" @keydown.enter.prevent="dropdown =! dropdown" @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()">
+					Shortcodes
+				</button>
+				<div class="capitalize max-h-0 overflow-hidden absolute inset-0 bottom-auto mt-10 w-56 rounded-md shadow-lg px-5 bg-white transition-all duration-500" x-ref="dropdown1" :class="dropdown = dropdown ? ' pb-2.5 border-t-4 border-yellow-400' : '' " :style="dropdown = dropdown ?  'max-height: '+ $refs.dropdown1.scrollHeight + 'px' :'' ">
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">4 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">3 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">2 column</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">List product</a>
+					<a href="#" class="block py-1.5 text-gray-700 text-medium hover:text-yellow-500 transform hover:translate-x-2 transition-all duration-500" x-state:on="Active" x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }" role="menuitem" tabindex="-1" id="user-menu-item-0" @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1" @click="dropdown = false; focusButton()">shop single</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>	
+</header>
+
+<main>
+<!-- Home slider carousel Swiper-carousel -->
+
+<section class="swiper homeSlider z-0">
+	<div class="swiper-wrapper">
+				<div class="swiper-slide ">
+			<div class="relative h-full w-full bg-size-cover bg-no-repate bg-position-center" style="background-image:url('images/demo/slider1-bg.jpg')">
+				<img src="images/slider-image/1648061069.jpg" class="object-cover" alt="sider images">
+				<div class="absolute inset-0 sm:right-16 flex flex-col items-end justify-center sm:justify-center  md:text-5xl font-bold  space-y-3">
+					<h1 class="text-yellow-400">PREMIUM</h1>
+					<h1 class="text-black"> HTML5 TEMPLATE </h1>
+				</div>
+			</div>
+		</div>	
+				<div class="swiper-slide ">
+			<div class="relative h-full w-full bg-size-cover bg-no-repate bg-position-center" style="background-image:url('images/demo/slider1-bg.jpg')">
+				<img src="images/slider-image/1648062461.jpg" class="object-cover" alt="sider images">
+				<div class="absolute inset-0 sm:right-16 flex flex-col items-end justify-center sm:justify-center  md:text-5xl font-bold  space-y-3">
+					<h1 class="text-yellow-400">POWERFUL</h1>
+					<h1 class="text-black">THEME FOREVER</h1>
+				</div>
+			</div>
+		</div>	
+			</div>
+	<div class="hidden swiper-button-next"></div>
+	<div class="hidden swiper-button-prev"></div>
+	<div class="hidden swiper-pagination"></div>
+</section>		<!-- Section-of-welcome  -->
+<section id="welcome" class="px-4 md:px-12 lg:px-20 bg-no-repeat bg-size-cover bg-position-center py-5" style="background-color:#f0f0f0">
+    <div class=" mx-auto px-2 sm:px-3 py-8 space-y-16">
+        <div class="lg:w-4/6 mx-auto text-center space-y-2">
+            <h1 class="uppercase text-2xl font-semibold">WELCOME TO MIST</h1>
+			<hr class="w-14 bg-yellow-400 p-px rounded mx-auto">
+			<p class="text-sm text-gray-600 pt-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam, culpa, soluta hic aperiam porro ipsum nisi optio necessitatibus commodi dolorum ente voluptatem officiis</p>
+        </div>
+        <div class="grid grid-cols-12 gap-x-6 ">
+            <div class="col-span-full lg:col-span-6 space-y-8">
+                <!-- Keywords -->
+                <div class="space-y-3">
+					<h1 class="uppercase text-2xl font-semibold">TELL YOUR DREAMS WE MAKE IT REAL</h1>
+					<hr class="w-14 bg-yellow-400 p-px rounded mt-0">
+					<p class="text-sm text-gray-600 pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec o</p>
+				</div>
+				<div class="grid grid-cols-12 gap-6 items-center">
+											<div class="col-span-full lg:col-span-4 space-y-3">
+							<div class="flex gap-3 items-center">
+								<div class="text-2xl text-yellow-400"><i class="fas fa-sync-alt"></i></div>
+								<h3 class="text-xl font-semibold">clen</h3>
+							</div>
+							<p class="text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quisquam</p>
+						</div>
+											<div class="col-span-full lg:col-span-4 space-y-3">
+							<div class="flex gap-3 items-center">
+								<div class="text-2xl text-yellow-400"><i class="fas fa-cogs"></i></div>
+								<h3 class="text-xl font-semibold">Simple</h3>
+							</div>
+							<p class="text-sm leading-relaxed">Lorem ipsum dolor sit amet elit. consectetur Vest</p>
+						</div>
+											<div class="col-span-full lg:col-span-4 space-y-3">
+							<div class="flex gap-3 items-center">
+								<div class="text-2xl text-yellow-400"><i class="far fa-handshake"></i></div>
+								<h3 class="text-xl font-semibold">Reliable</h3>
+							</div>
+							<p class="text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicin elit.</p>
+						</div>
+									</div>
+            </div>
+            <div class="col-span-full lg:col-span-6 sm:overflow-hidden aspect-[4/3] mt-6 lg:mt-0">
+				<img src="images/welcome-image/1648135865.jpg" class="w-full h-full object-center object-cover" alt="">
+            </div>
+        </div>
+    </div>
+</section>		<!-- Section-of-Hoem about us  -->
+
+<section id="home_about_us" class=" px-4 md:px-12 lg:px-20 border-t-2 border-white outline outline-offset-1 outline-sky-50 " style="background-color:#fafafa">
+    <div class="mx-auto px-2 sm:px-3 py-20">
+        <div class="grid grid-cols-12 gap-x-8 gap-y-8">
+			<!-- items-1 -->
+            <div class="col-span-full lg:col-span-4">
+				<h2 class="text-2xl font-semibold uppercase">about us</h2>
+				<hr class="pt-px w-12 bg-yellow-400 mt-4">
+				<div class="max-w-xl mx-auto mt-10" x-data="{selected: 1 }">
+					<ul class="shadow-box">
+												<li class="relative">
+							<button type="button" class="w-full py-2 text-left font-bold" @click="selected !== 1 ? selected = 1 : selected = null"><span>Who We are?</span></button>
+							<div class="relative text-gray-600 max-h-0 border-t-0 overflow-hidden transition-all duration-700" :class="selected == 1 ? 'border-t-2' : '' " x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+								<div class="py-3 text-sm">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsa </p>
+								</div>
+							</div>
+						</li>						
+												<li class="relative">
+							<button type="button" class="w-full py-2 text-left font-bold" @click="selected !== 2 ? selected = 2 : selected = null"><span>Who we do?</span></button>
+							<div class="relative text-gray-600 max-h-0 border-t-0 overflow-hidden transition-all duration-700" :class="selected == 2 ? 'border-t-2' : '' " x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+								<div class="py-3 text-sm">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsa esse obcaecati repudiandae veniam amet modi recusandae optio earum sequi accusantium culpa vitae iste sit commodi eaque iste sit commodi voluptatem officia quam.</p>
+								</div>
+							</div>
+						</li>						
+												<li class="relative">
+							<button type="button" class="w-full py-2 text-left font-bold" @click="selected !== 3 ? selected = 3 : selected = null"><span>How we do?</span></button>
+							<div class="relative text-gray-600 max-h-0 border-t-0 overflow-hidden transition-all duration-700" :class="selected == 3 ? 'border-t-2' : '' " x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+								<div class="py-3 text-sm">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsa esse obcaecati repudiandae veniam amet modi recusandae optio earum sequi accusantium culpa vitae iste sit commodi eaque iste sit commodi voluptatem officia quam.</p>
+								</div>
+							</div>
+						</li>						
+											</ul>
+				</div>	
+			</div>
+			<!-- items-2 -->
+            <div class="col-span-full lg:col-span-4">
+				<h2 class="text-2xl font-semibold uppercase">PROCESS</h2>
+				<hr class="pt-px w-12 bg-yellow-400 mt-4">
+				<div class="max-w-xl mx-auto mt-10 space-y-4">
+										<div>
+						<h2 class="font-semibold mb-3">HTML 5</h2>
+						<div class="bg-gray-700">
+							<div class="animate-pulse h-3 relative" style="width:70%; background-color:#24ffb6;"><span class="text-x absolute right-0 -mt-5">70%</span></div>
+						</div>
+					</div>
+										<div>
+						<h2 class="font-semibold mb-3">CSS</h2>
+						<div class="bg-gray-700">
+							<div class="animate-pulse h-3 relative" style="width:80%; background-color:#ff2424;"><span class="text-x absolute right-0 -mt-5">80%</span></div>
+						</div>
+					</div>
+										<div>
+						<h2 class="font-semibold mb-3">JAVASCRIPT</h2>
+						<div class="bg-gray-700">
+							<div class="animate-pulse h-3 relative" style="width:50%; background-color:#2faadf;"><span class="text-x absolute right-0 -mt-5">50%</span></div>
+						</div>
+					</div>
+										<div>
+						<h2 class="font-semibold mb-3">PHP</h2>
+						<div class="bg-gray-700">
+							<div class="animate-pulse h-3 relative" style="width:60%; background-color:#fbbf24;"><span class="text-x absolute right-0 -mt-5">60%</span></div>
+						</div>
+					</div>
+									</div>				
+			</div>
+			<!-- items-3 -->
+			 <div class="col-span-full lg:col-span-4">
+				<h2 class="text-2xl font-semibold uppercase">our office</h2>
+				<hr class="pt-px w-12 bg-yellow-400 mt-4">
+				<div class="max-w-xl mx-auto mt-10 space-y-4">
+					<div class="sm:overflow-hidden aspect-[4/2]">
+						<img src="images/about-image/1649712998.jpg" class="w-full h-full object-cover" alt="property">
+					</div>
+					<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores</p>
+				</div>				
+			</div>
+        </div>
+    </div>
+</section>		<!-- Section-of-counter  -->
+<style>
+	
+</style>
+<section id="counter" class="px-4 md:px-12 lg:px-20 py-16 bg-no-repeat bg-size-cover bg-position-center bg-fixed " style="background-image: url(images/counter/1649619665.jpg);">
+    <div class="mx-auto px-2 sm:px-3 py-8 space-y-16">
+		<div class="grid grid-cols-12 items-center justify-center  gap-x-6 gap-y-6">
+						<!-- counter-1 -->
+			<div class="col-span-full md:col-span-6 lg:col-span-3 mx-auto">
+				<div id="Javascript" class="h-36 w-36 relative"></div>
+				<h1 class="text-2xl font-semibold text-center text-white mt-2.5">Javascript</h1>
+			</div>
+			<script>			
+			// container
+			var bar = new ProgressBar.Circle( Javascript , {
+			 
+				color: '#aaa',
+			  // This has to be the same size as the maximum width to
+			  // prevent clipping
+			  strokeWidth: 3,
+			  trailWidth: 3,
+			  easing: 'easeInOut',
+			  duration: 1400,
+			  text: {
+				autoStyleContainer: false
+			  },
+			  from: { color: 'rgb(251, 191, 36, .8)', width: 3 },
+			  to: { color: 'rgb(251, 191, 36, 1)', width: 3 },
+			  // Set default step function for all animate calls
+			  step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value = Math.round(circle.value() * 70 )+'%';
+				if (value === 0) {
+				  circle.setText('');
+				} else {
+				  circle.setText(value);
+				}
+
+			  }
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '2rem';
+			bar.text.style.fontWeight = '600';
+			bar.text.style.color = 'white';
+			bar.animate(1.0);  // Number from 0.0 to 1.0
+			
+		</script>
+						<!-- counter-1 -->
+			<div class="col-span-full md:col-span-6 lg:col-span-3 mx-auto">
+				<div id="PHP" class="h-36 w-36 relative"></div>
+				<h1 class="text-2xl font-semibold text-center text-white mt-2.5">PHP</h1>
+			</div>
+			<script>			
+			// container
+			var bar = new ProgressBar.Circle( PHP , {
+			 
+				color: '#aaa',
+			  // This has to be the same size as the maximum width to
+			  // prevent clipping
+			  strokeWidth: 3,
+			  trailWidth: 3,
+			  easing: 'easeInOut',
+			  duration: 1400,
+			  text: {
+				autoStyleContainer: false
+			  },
+			  from: { color: 'rgb(251, 191, 36, .8)', width: 3 },
+			  to: { color: 'rgb(251, 191, 36, 1)', width: 3 },
+			  // Set default step function for all animate calls
+			  step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value = Math.round(circle.value() * 80 )+'%';
+				if (value === 0) {
+				  circle.setText('');
+				} else {
+				  circle.setText(value);
+				}
+
+			  }
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '2rem';
+			bar.text.style.fontWeight = '600';
+			bar.text.style.color = 'white';
+			bar.animate(1.0);  // Number from 0.0 to 1.0
+			
+		</script>
+						<!-- counter-1 -->
+			<div class="col-span-full md:col-span-6 lg:col-span-3 mx-auto">
+				<div id="Wordpress" class="h-36 w-36 relative"></div>
+				<h1 class="text-2xl font-semibold text-center text-white mt-2.5">Wordpress</h1>
+			</div>
+			<script>			
+			// container
+			var bar = new ProgressBar.Circle( Wordpress , {
+			 
+				color: '#aaa',
+			  // This has to be the same size as the maximum width to
+			  // prevent clipping
+			  strokeWidth: 3,
+			  trailWidth: 3,
+			  easing: 'easeInOut',
+			  duration: 1400,
+			  text: {
+				autoStyleContainer: false
+			  },
+			  from: { color: 'rgb(251, 191, 36, .8)', width: 3 },
+			  to: { color: 'rgb(251, 191, 36, 1)', width: 3 },
+			  // Set default step function for all animate calls
+			  step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value = Math.round(circle.value() * 60 )+'%';
+				if (value === 0) {
+				  circle.setText('');
+				} else {
+				  circle.setText(value);
+				}
+
+			  }
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '2rem';
+			bar.text.style.fontWeight = '600';
+			bar.text.style.color = 'white';
+			bar.animate(1.0);  // Number from 0.0 to 1.0
+			
+		</script>
+						<!-- counter-1 -->
+			<div class="col-span-full md:col-span-6 lg:col-span-3 mx-auto">
+				<div id="Development" class="h-36 w-36 relative"></div>
+				<h1 class="text-2xl font-semibold text-center text-white mt-2.5">Development</h1>
+			</div>
+			<script>			
+			// container
+			var bar = new ProgressBar.Circle( Development , {
+			 
+				color: '#aaa',
+			  // This has to be the same size as the maximum width to
+			  // prevent clipping
+			  strokeWidth: 3,
+			  trailWidth: 3,
+			  easing: 'easeInOut',
+			  duration: 1400,
+			  text: {
+				autoStyleContainer: false
+			  },
+			  from: { color: 'rgb(251, 191, 36, .8)', width: 3 },
+			  to: { color: 'rgb(251, 191, 36, 1)', width: 3 },
+			  // Set default step function for all animate calls
+			  step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value = Math.round(circle.value() * 90 )+'%';
+				if (value === 0) {
+				  circle.setText('');
+				} else {
+				  circle.setText(value);
+				}
+
+			  }
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '2rem';
+			bar.text.style.fontWeight = '600';
+			bar.text.style.color = 'white';
+			bar.animate(1.0);  // Number from 0.0 to 1.0
+			
+		</script>
+						
+		</div>
+    </div>
+</section>
+
+	
+		<!-- Section-of-addBanner  -->
+<section id="addBanner" class="px-4 md:px-12 lg:px-20 py-9 " style="background-color:#ffea00">
+	<h1 class="text-center text-xl md:text-3xl text-red-800 font-semibold uppercase px-2 sm:px-3">WE HELP YOU TO CREATE A BRAND FOR YOUR BUSINESS!!</h1>
+</section>		<!-- Section-of-features  -->
+<section id="features" class="px-4 md:px-12 lg:px-20 py-16 " style="background-color:#ffffff">
+    <div class="mx-auto px-2 sm:px-3 py-8 space-y-10">
+		<div class="text-center space-y-3.5 text-2xl font-semibold">
+			<h1>AWESOME FEATURES</h1>
+			<hr class="w-10 p-px bg-yellow-400 mx-auto">
+		</div>
+		<div class="grid grid-cols-12 items-center justify-center gap-x-8 gap-y-8">
+			<!-- features-1 -->
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fas fa-paint-roller "></i></div>
+					<h3 class="font-semibold text-xl uppercase">CLEAN DESIGN</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fas fa-tablet-alt "></i></div>
+					<h3 class="font-semibold text-xl uppercase">FULLY RESPONSIVE</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fas fa-chart-line "></i></div>
+					<h3 class="font-semibold text-xl uppercase">BOOTSTRAP 3.X</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="far fa-edit "></i></div>
+					<h3 class="font-semibold text-xl uppercase">WELL DOCUMENTED</h3>
+					<p class="text-sm text-gray-600">	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fab fa-react "></i></div>
+					<h3 class="font-semibold text-xl uppercase">AMAZING ANIMATIONS</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fas fa-font "></i></div>
+					<h3 class="font-semibold text-xl uppercase">600+ GOOGLE FONTS</h3>
+					<p class="text-sm text-gray-600">	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class=" fas fa-recycle "></i></div>
+					<h3 class="font-semibold text-xl uppercase">SEO OPTIMIZED</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+						<div class="col-span-full md:col-span-6 lg:col-span-3">
+				<!-- items 1 -->
+				<div class="space-y-2.5">
+					<div class="fa-2x text-yellow-400 mb-3"><i class="fas fa-headset"></i></div>
+					<h3 class="font-semibold text-xl uppercase">UNLIMITED SUPPORT</h3>
+					<p class="text-sm text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text.</p>
+				</div>
+			</div>
+					</div>
+    </div>
+</section>		<!-- Section-of-features  -->
+<section id="features" class="container mx-auto text-white bg-no-repeat bg-size-cover bg-position-center bg-fixed py-16 " style="background-image: url(images/latest-work-image/1649664278.jpg);">
+	<div class="text-center space-y-3.5 text-2xl font-semibold">
+		<h1> LATEST WORKS</h1>
+		<hr class="w-12 p-px rounded bg-yellow-400 mx-auto border-0">
+	</div>
+	
+	<div class="filter-button-group flex flex-wrap gap-x-8 gap-y-2 itmes-center justify-center mb-8">
+		<button class="btn active" data-filter="*">Show All</button>
+			
+		<button class="btn capitalize" data-filter=".landing-pages">landing pages</button>
+			
+		<button class="btn capitalize" data-filter=".web-design">web design</button>
+			</div>
+	<div class="grid grid-cols-12 items-center justify-center latest-works-isotope">
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item web-design">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1649669133.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">headline write hare</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="http://localhost.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="http://localhost.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item landing-pages">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1649669389.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">Personal Blog</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item web-design">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1649669551.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">Landing Pages</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item landing-pages">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1649669661.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">Landing Pages</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="http://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item web-design">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1652902917.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">Web Design</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item landing-pages">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1652903038.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">ewowif</h2>
+					<p class="text-sm text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- items 1 -->
+		<div class="col-span-full sm:col-span-6 lg:col-span-3 latest-works-item landing-pages">
+			<div class="relative group inset-0">
+					<img src="images/latest-work-image/1652903076.jpg" class="object-cover h-full w-full" alt="card image">
+				<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 m-auto bg-black bg-opacity-80 space-y-2.5 opacity-0 group-hover:opacity-100 transion-all duration-500">
+					<h2 class="text-2xl font-semibold mb-6">Persona'l Blog</h2>
+					<p class="text-sm text-medium">Lorem's ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<div class="flex gap-x-2 i items-center justify-center">
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-search"></i></a>
+						<a href="https://www.ebidda.com" class="h-9 w-9 flex items-center justify-center rounded-full bg-gray-900 hover:bg-yellow-400"><i class="fas fa-link"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+</section>		<!-- Section-of-services  -->
+
+
+<section id="services" class="px-4 md:px-12 lg:px-20 py-16 mx-auto " style="background-color:#f0f0f0">
+	<div class="mx-auto px-2 sm:px-3 space-y-14">
+		<div class="text-center space-y-3.5 text-2xl font-semibold">
+			<h1> SERVICES</h1>
+			<hr class="w-12 p-px rounded bg-yellow-400 mx-auto border-0">
+		</div>
+		<div class="relative grid grid-cols-12 items-center justify-center space-y-8 md:space-y-20 overflow-hidden">
+
+							<!-- items-1 -->
+				<div class="col-span-full md:col-span-6 z-50">
+					<div class="flex gap-x-6 md:gap-x-10 lg:gap-x-16 md:flex-row-reverse group md:text-right md:-mr-14 lg:-mr-20 lg:ml-auto">
+						<img src="images/services/1649122284.jpg" class="flex-shrink-0 h-24 w-24 md:h-28 md:w-28 lg:h-40 lg:w-40 border-8 border-gray-100 group-hover:border-yellow-400 transition-all duration-400 rounded-full" alt="services images">
+						<div class="">
+							<h4 class="text-2xl font-bold group-hover:text-yellow-300 mb-8 transition-all duration-300">WE ARE CREATIVE</h4>
+							<p class="text-ms text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-full md:col-span-6"></div>
+				<div class="col-span-full md:col-span-6"></div>
+								<div class="col-span-full md:col-span-6 z-50">
+						<div class=" flex gap-x-6 md:gap-x-10 lg:gap-x-16 group md:-ml-14 lg:-ml-20 lg:mr-auto">
+							<img src="images/services/1649123035.jpg" class="flex-shrink-0 h-24 w-24 md:h-28 md:w-28 lg:h-40 lg:w-40 border-8 border-gray-100 group-hover:border-yellow-400 transition-all duration-400 rounded-full" alt="services images">
+							<div class="">
+								<h4 class="text-2xl font-bold group-hover:text-yellow-300 mb-8 transition-all duration-300">DEVELOPERS WITH BEST SKILLS</h4>
+								<p class="text-ms text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+							</div>
+						</div>
+					</div>
+						
+									<!-- items-1 -->
+				<div class="col-span-full md:col-span-6 z-50">
+					<div class="flex gap-x-6 md:gap-x-10 lg:gap-x-16 md:flex-row-reverse group md:text-right md:-mr-14 lg:-mr-20 lg:ml-auto">
+						<img src="images/services/1649123941.jpg" class="flex-shrink-0 h-24 w-24 md:h-28 md:w-28 lg:h-40 lg:w-40 border-8 border-gray-100 group-hover:border-yellow-400 transition-all duration-400 rounded-full" alt="services images">
+						<div class="">
+							<h4 class="text-2xl font-bold group-hover:text-yellow-300 mb-8 transition-all duration-300">COOL DESIGN AND UX</h4>
+							<p class="text-ms text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-span-full md:col-span-6"></div>
+				<div class="col-span-full md:col-span-6"></div>
+								<div class="col-span-full md:col-span-6 z-50">
+						<div class=" flex gap-x-6 md:gap-x-10 lg:gap-x-16 group md:-ml-14 lg:-ml-20 lg:mr-auto">
+							<img src="images/services/1649675178.jpg" class="flex-shrink-0 h-24 w-24 md:h-28 md:w-28 lg:h-40 lg:w-40 border-8 border-gray-100 group-hover:border-yellow-400 transition-all duration-400 rounded-full" alt="services images">
+							<div class="">
+								<h4 class="text-2xl font-bold group-hover:text-yellow-300 mb-8 transition-all duration-300">UNLIMITED SUPPORT</h4>
+								<p class="text-ms text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+							</div>
+						</div>
+					</div>
+						
+								
+			<!-- below div for center border make -->
+			<div class="md:col-span-1 border border-gray-200 absolute w-px h-full left-12 md:left-1/2 md:right-1/2 z-0"></div>
+		</div>
+	</div>
+</section>		<!-- Section-of-companys  -->
+
+<section id="companys" class="px-4 md:px-12 lg:px-20 py-8 mx-auto bg-no-repeat bg-size-cover bg-position-center bg-fixed " style="background-image: url(images/company/1649678435.jpg);">
+    <div class="mx-auto px-2 sm:px-3 py-8 space-y-10">
+		<div class="grid grid-cols-12 items-center justify-center gap-4">
+			<!-- items-1 -->
+			<div class="col-span-full lg:col-span-6">
+				<div class="flex items-center justify-center flex-wrap p-5 gap-4">
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/latest-work-image/1649509645.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649747962.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649747982.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649748000.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649748033.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649748050.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649748064.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.com"> <img src="images/company/1649748073.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+										<div class="bg-white p-2">
+						<a href="https://www.ebidda.net"> <img src="images/company/1649748081.png" class="max-h-20 w-auto" alt=""></a>
+					</div>	
+							
+									</div>
+			</div>
+			<!-- items-2 -->
+			<div class="col-span-full lg:col-span-6">
+				<!-- carousel Swiper-carousel -->
+				<div class="swiper partner">
+					<div class="swiper-wrapper">
+						<!-- carousel items-1 -->
+						<div class="swiper-slide">
+							<div class="space-y-5">
+								<div class="bg-white p-3 border border-yellow-400 rounded text-center space-y-6">
+									<p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo consectetur!</p>
+									<div class="flex items-center justify-center gap-x-1 text-yellow-400">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+								<div class="text-center">
+									<img src="images/demo/avater-1.jpg" class="h-16 w-16 rounded-full block mx-auto mb-3" alt="image">
+									<h3 class="text-yellow-400 font-semibold">John Doe</h3>
+									<p class="text-white italic text-sm">Front-end dev, Ebidda</p>
+								</div>
+							</div>
+						</div>
+						<!-- carousel items-2 -->
+						<div class="swiper-slide">
+							<div class="space-y-5">
+								<div class="bg-white p-3 border border-yellow-400 rounded text-center space-y-6">
+									<p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo consectetur!</p>
+									<div class="flex items-center justify-center gap-x-1 text-yellow-400">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+								<div class="text-center">
+									<img src="images/demo/avater-1.jpg" class="h-16 w-16 rounded-full block mx-auto mb-3" alt="image">
+									<h3 class="text-yellow-400 font-semibold">Birde Li</h3>
+									<p class="text-white italic text-sm">Front-end dev, Ebidda</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</section>		<!-- Section-of-footer add banner  -->
+<section id="footer_add_banner" class="px-4 md:px-12 lg:px-20 py-9 group " style="background-color:#ffe229">
+	<div class="flex items-center justify-center text-xl lg:text-3xl font-semibold px-2 sm:px-3">
+		<h1 class="text-center text-red-800 px-2 sm:px-3">Get A Free Quote / Need a Help ?</h1>
+		<p class="hidden group-hover:block transition-all duration-600">&nbsp;</p>
+		<a href="https://www.ebidda.com" class="block" >Contact Us</a>
+	</div>
+	
+</section>	</main>
+
+	<footer>
+		<!-- Section-of-footer main-2 -->
+
+<section id="" class="px-4 md:px-12 lg:px-20 bg-gray-800 py-12 border-b border-gray-300" style="background: #f2f2f2;">
+    <div class="mx-auto px-2 sm:px-3">
+        <div class="grid grid-cols-12 gap-x-6 gap-y-6">
+			<!-- col-1 -->
+            <div class="col-span-full md:col-span-6 lg:col-span-3">
+				<h1 class="uppercase font-semibold text-xl border-b border-gray-300 pb-3 ">about us</h1>
+				<p class="text-sm text-gray-500 pt-3">We like to provide great site with complete features what you want to impletement in your business!</p>
+				<p class="text-sm text-gray-500 pt-3"><strong>Office: </strong>Zozotheme.com<br>No. 12, Ribon Building,<br>Walse street, Australia.</p>
+				<p class="text-sm text-gray-500 pt-3"><strong>Call Us: </strong>+0 (123) 456-78-90  or<br>+0 (123) 456-78-90</p>
+				
+			</div>
+			<!-- col-2 -->
+            <div class="col-span-full md:col-span-6 lg:col-span-3 ">
+				<h1 class="uppercase font-semibold text-xl border-b border-gray-300 pb-3 ">Blogroll</h1>
+				<ul class="list-none text-sm text-gray-500 pt-3">
+					<li><a href="#" class="hover:text-black transion-all duration-300">Complete Documentations</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Additional Plugins & Modules</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Child Themes</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">FAQ</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Support Forums</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Useful Blog</a></li>
+				</ul>
+				<h1 class="uppercase font-semibold text-xl border-b border-gray-300 py-3 ">MY ACCOUNT</h1>
+				<ul class="list-none text-sm text-gray-500 pt-3">
+					<li><a href="#" class="hover:text-black transion-all duration-300">My account</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Order History</a></li>
+					<li><a href="#" class="hover:text-black transion-all duration-300">Shopping Cart</a></li>
+				</ul>
+			</div>
+			<!-- col-3 -->
+            <div class="col-span-full md:col-span-6 lg:col-span-3 ">
+				<h1 class="uppercase font-semibold text-xl border-b border-gray-300 pb-3 ">Blogroll</h1>
+				<ul class="list-none text-sm text-gray-500 pt-0.5 divide-y divide-dashed divide-gray-500">
+					<li class="py-2.5"><a href="#" class="hover:text-black transion-all duration-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+					<li class="py-2.5"><a href="#" class="hover:text-black transion-all duration-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+					<li class="py-2.5"><a href="#" class="hover:text-black transion-all duration-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+				</ul>
+			</div>
+			<!-- col-4 -->
+            <div class="col-span-full md:col-span-6 lg:col-span-3 ">
+				<h1 class="uppercase font-semibold text-xl border-b border-gray-300 pb-3 ">NEWSLETTER SIGNUP</h1>
+				<ul class="list-none text-sm text-gray-500 pt-0.5">
+					<li class="py-2.5"><a href="#" class="hover:text-black transion-all duration-300">Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:</a></li>
+					<li class="py-2.5">
+						<form method="post" class=" flex items-center justify-between shadow-inner shadow-md drop-shadow-2xl">
+							<input type="text" id="newsLetter" name="newsLetter" class="h-8 block full py-0.5 form-input shadow-sm bg-transparent text-gray-700 border-0 focus:ring-0 focus:border-yellow-400" placeholder="E-mail address" value="">
+							<button type="button" name="subNewsLetter" class="h-8 w-8 flex items-center justify-center bg-yellow-400 hover:bg-gray-800 text-white text-xl transion-all duration-300"><i class="fas fa-arrow-right"></i></button>
+						</form>	
+					</li>
+					<li class="py-2.5 space-y-3">
+						<h3 class="text-md font-semibold">TOTAL DOWNLOADS : 93550</h3>
+						<h3 class="text-md font-semibold">HAPPY CLIENTS : 79550</h3>
+					</li>
+					<li>
+						<ul class="list-none flex itmes-center gap-1.5">
+							<a href="https://web.facebook.com/arrahman47/" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-blue-500 text-white transion-all duration-300"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/AR_Rahman47" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-sky-500 text-white transion-all duration-300"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.linkedin.com/in/arrahman73/" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-green-500 text-white transion-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+							<a href="http://www.github.com/ARRahman73/" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-black text-white hover:text-white transion-all duration-300"><i class="fab fa-github"></i></a>
+							<a href="arr47009@gmail" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-red-500 text-white transion-all duration-300"><i class="fab fa-google-plus-g"></i></a>
+						</ul>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</section>		<!-- Section-of-footer copyright-3 -->
+<section id="" class="px-4 md:px-12 lg:px-20 py-8 " style="background-color:#9d9b9b">
+    <div class="mx-auto px-6 sm:px-3 ">
+        <div class="flex flex-col lg:flex-row gap-5 items-center justify-between">
+			<ul class="list-none flex itmes-center justify-center justify-center sm:justify-between flex-wrap  gap-3 text-sm text-white">
+				<li ><p class="text-center">&copy; 2022 Your Company Name | All Rights Reserved By <a class="font-semibold hover:text-rose-500 transion-all duration-300" href="https://exploretechsolutions.com/">Explore Tech Solutions</a> and Design By <a class="font-semibold hover:text-rose-500 transion-all duration-300" href="https://web.facebook.com/arrahman47/">AR Rahman</a></p></li>
+				<li ><a href="http://www.facebook.com/" class="hover:text-black transion-all duration-300">Creative Agency  </a></li>
+				<li ><a href="http://www.ebidda.com/" class="hover:text-black transion-all duration-300">Terms of Use  </a></li>
+				<li ><a href="http://www.ebidda.com/" class="hover:text-black transion-all duration-300">Privacy Policy  </a></li>
+			</ul>
+            <a href="#" class="h-8 w-8 flex items-center justify-center bg-gray-400 rounded-full hover:bg-yellow-400 text-white transion-all duration-300"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </div>
+</section>	
+</footer>
+
+	<script src="js/alpine.min.js"></script>
+	<script //src="js/progressbar.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script type="module">
+		import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+		const swiper = new Swiper(...)
+	</script>
+	<script>
+		var swiper = new Swiper(".homeSlider", {
+			//slidesPerView: 3,
+			spaceBetween: 30,
+			//slidesPerGroup: 1,
+			loop: true,
+			effect: "fade",
+			loopFillGroupWithBlank: true,
+			centeredSlides: true,
+			// mousewheel: true,
+			keyboard: {
+			enabled: true,
+			},
+			autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+			},
+			pagination: {
+			el: ".swiper-pagination",
+			dynamicBullets: true,
+			clickable: true,
+			},
+			navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+			},
+		});
+    </script>
+	<script>
+		var swiper = new Swiper(".partner", {
+			spaceBetween: 50,
+			loop: true,
+			mousewheel: true,
+			autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+			},
+			pagination: {
+			el: ".swiper-pagination",
+			dynamicBullets: true,
+			},
+			navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+			},
+		});
+    </script>
+	<script>
+		var $grid = $(".latest-works-isotope").isotope({
+			// options
+			itemSelector: ".latest-works-item",
+			layoutMode: "fitRows",
+		})
+		// filter items on button click
+		$(".filter-button-group").on("click", "button", function () {
+			$(".filter-button-group .btn").removeClass("active")
+			var filterValue = $(this).attr("data-filter")
+			$grid.isotope({ filter: filterValue })
+			$(this).addClass("active")
+		})
+	</script>
+</body>
+
+</html>
