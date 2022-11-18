@@ -1,5 +1,4 @@
-### agency-netlify  ⇢ [agency.netlify.app](https://rahman-agency.netlify.app) visite
-
+### CMS  ⇢  [Agency Theme](https://arrahman73.github.io/agency-deploy/) &#9729;
 # Agency landing Theme Made By AR Rahman
 Agency It Is A Company Profile Theme | Landing Page is Publish By Netlify
 <br>
@@ -34,7 +33,8 @@ Agency It Is A Company Profile Theme | Landing Page is Publish By Netlify
 
 ## Work History : 🔗
 
-### &#9729;  [agency.netlify.app](https://rahman-agency.netlify.app)
+### CMS  ⇢  [Agency Theme](https://arrahman73.github.io/agency-deploy/) &#9729;
+### Hosted  ⇢  [Agency Theme Dynamic](https://www.rahman.ga) &#9729;
 
 
 <br>
